@@ -1,0 +1,36 @@
+.cmp-super-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+.cmp-super-text__body {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+.cmp-super-text__quote {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  font-style: italic;
+  border-left: 4px solid #ccc;
+  padding-left: 16px;
+  margin-bottom: 20px;
+}
+.cmp-super-text__author {
+  align-self: flex-end;
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+.cmp-super-text_disclaimer {
+  font-size: 12px;
+  line-height: 1.4;
+  color: #333;
+}
+.cmp-super-text--capital-letter p:first-of-type::first-letter {
+  float: left;
+  font-size: 4em;
+  line-height: 1;
+  padding-right: 20px;
+}

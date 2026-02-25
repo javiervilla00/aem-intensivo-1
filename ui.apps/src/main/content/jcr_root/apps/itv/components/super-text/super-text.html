@@ -1,0 +1,24 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html" 
+     data-sly-call="${clientlib.all @ categories='itv.components.super-text'}"></sly>
+
+<div
+  data-sly-use.textModel="com.adobe.cq.wcm.core.components.models.Text"
+  data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
+  data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+  data-sly-test.text="${textModel.text}"
+  data-cmp-data-layer="${textModel.data.json}"
+  id="${component.id}"
+  class="cmp-text cmp-super-text ${properties.textStyle ? properties.textStyle : 'cmp-super-text__body'} ${properties.capitalLetter ? 'cmp-super-text--capital-letter' : ''}"
+>
+  <p class="cmp-text__paragraph" data-sly-unwrap="${textModel.isRichText}">
+    ${text @ context = textModel.isRichText ? 'html' : 'text'}
+  </p>
+  
+  <sly data-sly-test="${properties.textStyle == 'cmp-super-text__quote'}">
+      <div class="cmp-super-text__author" data-sly-test="${properties.author}">
+        &#8212; ${properties.author}
+      </div>
+  </sly>
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !text, classAppend='cmp-text'}"></sly>
