@@ -87,6 +87,16 @@
                         text="Letra Capital"
                         name="./capitalLetter"
                         value="{Boolean}true" />
+                      <theme
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Tema"
+                        name="./theme">
+                      <items jcr:primaryType="nt:unstructured">
+                        <dark jcr:primaryType="nt:unstructured" text="Oscuro" value="cmp-super-text--dark" />
+                        <light jcr:primaryType="nt:unstructured" text="Claro" value="cmp-super-text--light" />
+                      </items>
+                      </theme>
                       <text
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="cq/gui/components/authoring/dialog/richtext"

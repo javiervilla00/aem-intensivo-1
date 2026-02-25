@@ -8,7 +8,7 @@
   data-sly-test.text="${textModel.text}"
   data-cmp-data-layer="${textModel.data.json}"
   id="${component.id}"
-  class="cmp-text cmp-super-text ${properties.textStyle ? properties.textStyle : 'cmp-super-text__body'} ${properties.capitalLetter ? 'cmp-super-text--capital-letter' : ''}"
+  class="cmp-text cmp-super-text ${properties.textStyle ? properties.textStyle : 'cmp-super-text__body'} ${properties.capitalLetter ? 'cmp-super-text--capital-letter' : ''} ${properties.theme ? properties.theme : 'cmp-super-text--light'}"
 >
   <p class="cmp-text__paragraph" data-sly-unwrap="${textModel.isRichText}">
     ${text @ context = textModel.isRichText ? 'html' : 'text'}

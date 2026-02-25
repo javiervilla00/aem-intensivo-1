@@ -34,3 +34,17 @@
   line-height: 1;
   padding-right: 20px;
 }
+.cmp-super-text--light {
+  background-color: transparent;
+}
+.cmp-super-text--dark {
+  background-color: #1a1a1a;
+  padding: 20px;
+}
+.cmp-super-text--dark p,
+.cmp-super-text--dark .cmp-super-text__author {
+  color: white;
+}
+.cmp-super-text--dark.cmp-super-text__quote {
+  border-left-color: #03eeff;
+}
