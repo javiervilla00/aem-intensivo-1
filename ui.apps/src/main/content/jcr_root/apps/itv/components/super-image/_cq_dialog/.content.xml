@@ -197,6 +197,28 @@
                         text="Activar zoom"
                         value="{Boolean}true"
                         name="./enableZoom" />
+                      <boxShadow
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldDescription="Box shadow values in CSS format. For example, a value of '0px 4px 8px rgba(0, 0, 0, 0.2)' will apply a subtle shadow below the image."
+                        fieldLabel="Box shadow (CSS format)"
+                        name="./boxShadow">
+                        <items jcr:primaryType="nt:unstructured">
+                          <none
+                            jcr:primaryType="nt:unstructured"
+                            checked="{Boolean}true"
+                            text="Sin sombra"
+                            value="" />
+                          <soft
+                            jcr:primaryType="nt:unstructured"
+                            text="Sombra suave"
+                            value="cmp-super-image--shadow-soft" />
+                          <strong
+                            jcr:primaryType="nt:unstructured"
+                            text="Sombra fuerte"
+                            value="cmp-super-image--shadow-strong" />
+                        </items>
+                      </boxShadow>
                     </items>
                   </column>
                 </items>
