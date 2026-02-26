@@ -48,3 +48,15 @@
 .cmp-super-text--dark.cmp-super-text__quote {
   border-left-color: #03eeff;
 }
+.cmp-super-text--margin-bottom-small {
+  margin-bottom: 24px;
+}
+.cmp-super-text--margin-bottom-big {
+  margin-bottom: 48px;
+}
+.cmp-super-text--margin-top-small {
+  margin-top: 24px;
+}
+.cmp-super-text--margin-top-big {
+  margin-top: 48px;
+}

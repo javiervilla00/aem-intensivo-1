@@ -92,11 +92,42 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/select"
                         fieldLabel="Tema"
                         name="./theme">
-                      <items jcr:primaryType="nt:unstructured">
-                        <dark jcr:primaryType="nt:unstructured" text="Oscuro" value="cmp-super-text--dark" />
-                        <light jcr:primaryType="nt:unstructured" text="Claro" value="cmp-super-text--light" />
-                      </items>
+                        <items jcr:primaryType="nt:unstructured">
+                          <dark jcr:primaryType="nt:unstructured" text="Oscuro"
+                            value="cmp-super-text--dark" />
+                          <light jcr:primaryType="nt:unstructured" text="Claro"
+                            value="cmp-super-text--light" />
+                        </items>
                       </theme>
+                      <marginBottom
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Margen Inferior"
+                        text="Agregar margen inferior al párrafo"
+                        name="./marginBottom"
+                        value="{Boolean}true" >
+                        <items jcr:primaryType="nt:unstructured">
+                            <mgNone jcr:primaryType="nt:unstructured" text="No" value="cmp-super-text--no-margin-bottom" />
+                            <mgSmall jcr:primaryType="nt:unstructured" text="Pequeño" value="cmp-super-text--margin-bottom-small" />
+                            <mgBig jcr:primaryType="nt:unstructured" text="Grande" value="cmp-super-text--margin-bottom-big" />
+                        </items>
+                      </marginBottom>
+                      <marginTop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Margen superior"
+                        text="Agregar margen superior al párrafo"
+                        name="./marginTop"
+                        value="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                          <mgNone jcr:primaryType="nt:unstructured" text="No"
+                            value="cmp-super-text--no-margin-top" />
+                          <mgSmall jcr:primaryType="nt:unstructured" text="Pequeño"
+                            value="cmp-super-text--margin-top-small" />
+                          <mgBig jcr:primaryType="nt:unstructured" text="Grande"
+                            value="cmp-super-text--margin-top-big" />
+                        </items>
+                      </marginTop>
                       <text
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="cq/gui/components/authoring/dialog/richtext"
