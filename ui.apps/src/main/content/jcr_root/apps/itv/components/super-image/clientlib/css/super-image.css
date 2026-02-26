@@ -1,0 +1,13 @@
+.cmp-super-image {
+  overflow: hidden;
+  display: block;
+}
+.cmp-super-image .cmp-image__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease-in-out !important;
+}
+.cmp-super-image--zoom:hover .cmp-image__image {
+  transform: scale(1.15) !important;
+}
