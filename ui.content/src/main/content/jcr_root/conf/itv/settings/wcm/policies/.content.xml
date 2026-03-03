@@ -212,12 +212,12 @@
             <container jcr:primaryType="nt:unstructured">
                 <policy_1574694950110
                     jcr:description="Allows the template components and defines the component mapping (this configures what components should be automatically created when authors drop assets from the content finder to the page editor)."
-                    jcr:lastModified="{Date}2026-03-02T08:28:33.501+01:00"
+                    jcr:lastModified="{Date}2026-03-03T13:04:08.464+01:00"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Page Root"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    components="[group:AEM Intensivo - Content,/apps/itv/components/form/container,group:AEM Intensivo - Structure]"
+                    components="[/apps/itv/components/super-image,/apps/itv/components/super-text,/apps/itv/components/super-title]"
                     layoutDisabled="false">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                     <cq:authoring jcr:primaryType="nt:unstructured">
@@ -311,6 +311,36 @@
                         </assetToComponentMapping>
                     </cq:authoring>
                 </policy_1575040440977>
+                <policy_1554613959486700
+                    jcr:lastModified="{Date}2026-03-02T15:22:44.332+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Left Container"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:AEM Intensivo - Content,/apps/itv/components/form/container,group:AEM Intensivo - Structure]"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1554613959486700>
+                <policy_1554619911864400
+                    jcr:lastModified="{Date}2026-03-02T15:22:50.234+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Right Container"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[group:AEM Intensivo - Content,/apps/itv/components/form/container,group:AEM Intensivo - Structure]"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1554619911864400>
+                <policy_1647042737213900
+                    jcr:lastModified="{Date}2026-03-03T13:05:49.755+01:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Layout Container basic two cols"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    components="[/apps/itv/components/super-image,/apps/itv/components/super-text,/apps/itv/components/super-title]"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_1647042737213900>
             </container>
             <teaser jcr:primaryType="nt:unstructured">
                 <policy_1575031387650
@@ -339,10 +369,13 @@
             <page jcr:primaryType="nt:unstructured">
                 <policy
                     jcr:description="Includes the required client libraries."
+                    jcr:lastModified="{Date}2026-03-02T15:19:11.482+01:00"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Generic Page"
                     sling:resourceType="wcm/core/components/policy/policy"
                     clientlibs="[itv.dependencies,itv.site]"
+                    clientlibsAsync="false"
                     clientlibsJsHead="itv.dependencies">
                     <jcr:content jcr:primaryType="nt:unstructured"/>
                 </policy>
