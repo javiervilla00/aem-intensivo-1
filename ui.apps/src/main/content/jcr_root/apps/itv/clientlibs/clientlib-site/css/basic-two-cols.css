@@ -1,19 +1,13 @@
-/* Body sin header ni footer */
-.basicpage .root > .cmp-container > .aem-Grid > .container {
-  background-color: red;
-}
 /* Contenedor principal */
 .basicpage .root > .cmp-container > .aem-Grid > .container > .cmp-container {
   margin: 0 auto;
   margin-left: 160px;
   margin-right: 160px;
-  background-color: aqua;
   padding: 60px;
 }
 /* Columnas */
 .basicpage .root > .cmp-container > .aem-Grid > .container > .cmp-container > .aem-Grid > .aem-GridColumn {
   width: calc(50% - 5px) !important;
-  background-color: yellow;
 }
 .basicpage .root > .cmp-container > .aem-Grid > .container > .cmp-container > .aem-Grid {
   display: flex;
