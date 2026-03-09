@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        pageTitle="AEM Intensivo"
-        jcr:primaryType="cq:PageContent"
-        jcr:title="en"
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2026-02-26T12:10:03.553+01:00"
+        cq:lastModifiedBy="admin"
         cq:template="/conf/itv/settings/wcm/templates/page-content"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="en"
         sling:resourceType="itv/components/page"
-    >
+        pageTitle="AEM Intensivo">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="itv/components/container"
@@ -76,6 +77,82 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="itv/components/helloworld"
                         text="lalala :)"/>
+                    <super_title
+                        jcr:created="{Date}2026-02-23T11:31:57.756+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-02-26T08:40:48.371+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="itv/components/super-title"
+                        color="#F012BE"
+                        linkTarget="_self"
+                        scrollreveal="on"
+                        style="cmp-super-title--times"
+                        type="h1"/>
+                    <super_text
+                        jcr:created="{Date}2026-02-24T11:49:37.811+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-02-25T17:52:21.340+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="itv/components/super-text"
+                        capitalLetter="true"
+                        text="&lt;p>Body&lt;/p>&#xd;&#xa;&lt;p>El diseño web moderno no solo busca la estética, sino la legibilidad. Un buen cuerpo de texto debe tener un equilibrio entre el interlineado y contraste para evitar la fatiga visual del usuario&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"
+                        textStyle="cmp-super-text__body"/>
+                    <super_text_1915660425
+                        jcr:created="{Date}2026-02-25T10:54:33.588+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-02-25T18:11:35.799+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="itv/components/super-text"
+                        author="[Leonardo da Vinci]"
+                        capitalLetter="true"
+                        marginBottom="cmp-super-text--no-margin-bottom"
+                        marginTop="cmp-super-text--no-margin-top"
+                        text="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eleifend neque mollis enim posuere, maximus posuere lacus gravida. Duis auctor, lacus iaculis facilisis consequat, urna massa imperdiet lorem, ac viverra purus risus mattis sapien. Nullam condimentum viverra ante, at semper purus elementum sit amet. Nullam accumsan egestas lectus, et varius est posuere nec. Nullam maximus luctus condimentum. Vestibulum sollicitudin, sem at euismod eleifend, neque nisl bibendum sapien, id consequat neque est efficitur nulla. Integer interdum, purus in laoreet finibus, dolor odio lacinia mi, in dictum nibh erat vel sapien. Nunc neque enim, sollicitudin euismod aliquet vel, commodo sit amet magna. Nullam sollicitudin sagittis nulla, ac aliquet tellus elementum pellentesque. Vestibulum vitae sapien neque. Cras ullamcorper laoreet massa. Vivamus elementum condimentum egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum eleifend pretium lorem, ac pharetra neque ultricies vitae. Phasellus imperdiet rhoncus mi, sollicitudin laoreet purus.&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"
+                        textStyle="cmp-super-text__quote"
+                        theme="cmp-super-text--dark"/>
+                    <super_text_1064147143
+                        jcr:created="{Date}2026-02-25T11:22:11.080+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-02-26T08:54:46.061+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="itv/components/super-text"
+                        capitalLetter="true"
+                        marginBottom="cmp-super-text--margin-bottom-big"
+                        marginTop="cmp-super-text--no-margin-top"
+                        text="&lt;p>Prueba de Disclaimer. Texto texto&amp;nbsp;texto&amp;nbsp;texto texto texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto texto&amp;nbsp;texto texto&amp;nbsp;texto&amp;nbsp;texto texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto texto&amp;nbsp;texto texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto&amp;nbsp;texto.&lt;/p>&#xd;&#xa;&lt;p>Más texto más texto&amp;nbsp;más texto&amp;nbsp;más texto más texto más texto&amp;nbsp;más texto&amp;nbsp;más texto más texto&amp;nbsp;más texto más texto&amp;nbsp;más texto más texto más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto más texto&amp;nbsp;más texto más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto más texto más texto más texto más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&amp;nbsp;más texto&lt;/p>&#xd;&#xa;"
+                        textIsRich="true"
+                        textStyle="cmp-super-text__disclaimer"
+                        theme="cmp-super-text--dark"/>
+                    <super_image
+                        jcr:created="{Date}2026-02-26T10:30:46.914+01:00"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2026-02-26T12:10:03.548+01:00"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="itv/components/super-image"
+                        alt="Prueba"
+                        borderRadius="255"
+                        boxShadow="cmp-super-image--shadow-strong"
+                        displayPopupTitle="true"
+                        enableZoom="true"
+                        fileName="imagen-de-prueba-320x240-1.jpg"
+                        imageFromPageImage="false"
+                        isDecorative="false"
+                        linkTarget="_self">
+                        <file/>
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="3"/>
+                        </cq:responsive>
+                    </super_image>
                 </container>
             </container>
         </root>

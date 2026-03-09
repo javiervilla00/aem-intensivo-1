@@ -1,0 +1,65 @@
+/* Contenedor principal */
+.basicpage .root > .cmp-container > .aem-Grid > .container > .cmp-container {
+  margin: 0 auto;
+  margin-left: 160px;
+  margin-right: 160px;
+  background-color: #e2fede;
+  padding: 60px;
+}
+/* Columnas */
+.basicpage
+  .root
+  > .cmp-container
+  > .aem-Grid
+  > .container
+  > .cmp-container
+  > .aem-Grid
+  > .aem-GridColumn {
+  width: calc(50% - 5px) !important;
+}
+/* Columna izquierda */
+.basicpage
+  .root
+  > .cmp-container
+  > .aem-Grid
+  > .container
+  > .cmp-container
+  > .aem-Grid
+  > .aem-GridColumn:first-child {
+  background-color: #fbffc2;
+}
+/* Columna derecha */
+.basicpage
+  .root
+  > .cmp-container
+  > .aem-Grid
+  > .container
+  > .cmp-container
+  > .aem-Grid
+  > .aem-GridColumn:last-child {
+  background-color: #ffe5e5;
+}
+
+.basicpage .root > .cmp-container > .aem-Grid > .container > .cmp-container > .aem-Grid {
+  display: flex;
+  gap: 10px;
+}
+/* Móvil */
+@media (max-width: 724px) {
+  /* Elimina márgenes y padding para que ocupe todo el ancho en pantallas pequeñas */
+  html,
+  body.basicpage {
+    margin: 0;
+    padding: 0;
+  }
+  /* Contenedor principal */
+  .basicpage .root > .cmp-container > .aem-Grid > .container > .cmp-container {
+    margin: 0 16px;
+  }
+}
+header {
+  background-color: #b6dfea;
+}
+footer {
+  background-color: #eac8ed;
+}

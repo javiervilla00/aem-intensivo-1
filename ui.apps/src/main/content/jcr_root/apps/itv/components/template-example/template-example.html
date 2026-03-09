@@ -1,0 +1,17 @@
+<sly data-sly-use.templates="./templates.html"/>
+
+<sly data-sly-test="${!properties.layout || properties.layout == 'layout1'}">
+    <sly data-sly-call="${templates.layout1}"/>
+</sly>
+
+<sly data-sly-test="${properties.layout == 'layout2'}">
+    <sly data-sly-call="${templates.layout2}"/>
+</sly>
+
+<sly data-sly-test="${properties.layout == 'layout3'}">
+    <sly data-sly-call="${templates.layout3}"/>
+</sly>
+
+<sly data-sly-test="${properties.layout == 'layout4'}">
+    <sly data-sly-call="${templates.layout4}"/>
+</sly>
