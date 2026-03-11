@@ -51,6 +51,7 @@
   body.basicpage {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
   }
   /* Contenedor principal */
   .basicpage .root > .cmp-container > .aem-Grid > .container > .cmp-container {
