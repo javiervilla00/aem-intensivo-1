@@ -1,9 +1,25 @@
-<sly data-sly-use.model="com.itv.core.models.CardsModel"/>
+<sly data-sly-use.model="com.itv.core.models.CardsModel"
+  data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+  data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"/>
 
-<sly data-sly-list.card="${model.cards}">
-    <div class="cardlist__card ${properties.layout}">
-        <img class="cardlist__image" src="${card.image}" alt="${card.title}"/>
-        <h2 class="cardlist__title">${card.title}</h2>
-        <span class="cardlist__author">${card.author}</span>
-    </div>
+  <sly data-sly-call="${clientlib.all @ categories='itv.components.cardlist'}"/>
+
+  <sly data-sly-test.hasCards="${model.cards && model.cards.size > 0}"/>
+  
+  <sly data-sly-test="${!hasCards}">
+    <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>
+  </sly>
+
+  <div data-sly-test="${hasCards}" class="cardlist__container ${properties.layout}">
+    <sly data-sly-list.card="${model.cards}">
+      <div class="cardlist__card ${properties.layout}">
+          <img class="cardlist__image" src="${card.image}" alt="${card.title}"/>
+          <h2 class="cardlist__title">${card.title}</h2>
+          <span class="cardlist__author">By ${card.author}</span>
+          <div data-sly-test="${properties.layout == 'vertical'}"
+            class="cardlist__button"   
+            data-sly-resource="${'button-{0}' @ format=[cardList.index], resourceType='core/wcm/components/button/v2/button'}"></div>
+      </div>
+    </sly>
+  </div>
 </sly>
