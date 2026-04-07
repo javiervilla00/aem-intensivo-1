@@ -8,29 +8,22 @@
   padding: 0 14.5px;
   background-color: $color-background-header-footer;
   overflow: hidden;
-  @media (min-width: 768px) {
+  @media ($tablet) {
     height: 557px !important;
     padding: 0 109.17px;
   }
-  @media (min-width: 1025px) {
+  @media ($desktop) {
     height: 768px !important;
     padding: 0 204.17px;
     display: flex;
     justify-content: center;
-  }
-  :global(.cq-wcm-edit) & {
-    &__backgroundimage, &__carimage {
-      pointer-events: auto !important;
-      z-index: 5 !important;
-      border: 1px dashed rgba(255,255,255,0.5);
-    }
   }
   &__content,
   &__buttons {
     position: relative;
     z-index: 10;
     width: 100%;
-    @media (min-width: 768px) {
+    @media ($tablet) {
       width: 519px;
     }
   }
@@ -40,7 +33,7 @@
       font-family: $font-family;
       color: $color-text-header-footer;
       margin-bottom: 24px;
-      @media (min-width: 768px) {
+      @media ($tablet) {
         font-size: $font-title-size-h1-tablet-desktop;
       }
     }
@@ -57,38 +50,7 @@
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 152.41px;
-    &-buy .cmp-button {
-      background-color: $color-button-primary;
-      color: $color-text-header-footer;
-      border-radius: 4px;
-      padding: 16px 24px;
-      border: none;
-      height: 60px;
-      width: 118px;
-      font-size: $font-button-size;
-      transition: background 0.3s;
-      &:hover {
-        background-color: darken($color-button-primary, 10%);
-        transform: scale(1.15);
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-      }
-    }
-    &-testdrive .cmp-button {
-      background-color: transparent;
-      color: $color-text-header-footer;
-      border-radius: 4px;
-      padding: 16px 24px;
-      border: none;
-      height: 60px;
-      width: 190px;
-      font-size: $font-button-size;
-      transition: background 0.3s;
-      &:hover {
-        background-color: darken(rgba(255, 255, 255, 0.1), 10%);
-        transform: scale(1.15);
-        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
-      }
-    }
+    z-index: 3;
   }
   &__images {
     position: absolute;
@@ -106,7 +68,7 @@
       height: 100%;
       z-index: 2;
       background: linear-gradient(
-        to bottom,
+        to right,
         rgba(0, 0, 0, 0.8) 0%,
         rgba(0, 0, 0, 0.2) 60%,
         transparent 100%
@@ -116,19 +78,19 @@
   }
   &__backgroundimage {
     position: absolute;
-    top: -89px;
-    left: -479px;
+    top: -130px;
+    left: -350px;
     width: 1405px;
     height: 1101px;
     transform: scaleX(-1);
     z-index: 1;
-    overflow-x: hidden;
-    @media (min-width: 768px) {
+    overflow: hidden;
+    @media ($tablet) {
       top: -203px;
-      width: 1920px;
-      height: 1267px;
-      left: 0;
+      width: calc(100vw + 130px);
+      left: -130px;
     }
+     img,
     .cmp-image,
     .cmp-image__image {
       width: 100%;
@@ -137,37 +99,72 @@
     }
   }
   &__carimage {
-    position: relative;
+    position: absolute;
     z-index: 3;
     pointer-events: none;
-    top: 291px;
-    left: -62px;
-    max-width: none !important;
-    @media (min-width: 768px) {
-      top: -50px;
-      left: 382px;
+    top: 310px;
+    left: -80px;
+    width: 700px;
+    @media ($tablet) {
+      top: -90px;
+      left: 370px;
       height: auto;
+      width: 1200px;
     }
-    @media (min-width: 1025px) {
-      position: absolute;
-      top: 0px;
-      left: 590px;
+    @media ($desktop) {
+      top: -10px;
+      left: 570px;
       height: auto;
+      width: 1300px;
     }
-    .cmp-image,
-    .cmp-image__image {
-      width: 728px;
-      max-width: none !important;
+    img, .cmp-image__image{
+      width: 100%;
       height: auto !important;
-      display: block !important;
-      object-fit: contain !important;
-      object-position: left bottom !important;
-      @media (min-width: 768px) {
-        width: 1175px;
+      display: block;
+      object-fit: contain;
+      object-position: left bottom;
+    }
+  }
+  .hero-clean & {
+    &__images::after {
+      display: none;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      box-sizing: border-box;
+      padding: 0 16px;
+      @media ($tablet) {
+        align-items: flex-start;
+        text-align: left;
+        padding: 0 40px;
       }
-      @media (min-width: 1025px) {
-        width: 1400px;
+      @media ($desktop) {
+        padding: 0 160px;
       }
+    }
+    &__content-title {
+      font-family: $font-family-luxury;
+      font-weight: 300;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-size: $font-title-size-luxury-mobile;
+      text-shadow: $title-shadow-hero-1, $title-shadow-hero-2, $title-shadow-hero-3;
+      margin: 0;
+      @media ($tablet) {
+        font-size: $font-title-size-luxury;
+      }
+    }
+    &__backgroundimage {
+      transform: none !important;
     }
   }
 }

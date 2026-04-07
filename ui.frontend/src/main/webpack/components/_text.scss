@@ -1,2 +1,39 @@
-.cmp-text {}
-.cmp-text__paragraph {}
+.style-slogan {
+  display: flex;
+  justify-content: center;
+  padding: 60px 16px;
+  background-color: $color-background;
+  @media ($tablet) {
+    padding: 100px 40px;
+  }
+  @media ($desktop) {
+    padding: 100px 160px;
+  }
+  .cmp-text{
+    max-width: 800px;
+    text-align: center;
+    p, h2 {
+      font-family: $font-family-luxury;
+      font-weight: 300;
+      line-height: 1.4;
+      color: black;
+      margin: 0;
+      font-size: clamp(24px, 5vw, 42px);
+      display: inline-block;
+      transition: all 0.5s ease;
+      backface-visibility: hidden;
+      &:hover {
+        transform: scale(1.05) perspective(1000px) rotateX(10deg);
+        text-shadow: 2px 5px 15px #00000033;
+      }
+      &::after {
+        content: '';
+        display: block;
+        width: 20vw;
+        height: 1px;
+        background-color: #d4af37;
+        margin: 30px auto 0;
+      }
+    }
+  }
+}

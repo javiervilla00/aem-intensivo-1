@@ -1,4 +1,45 @@
-.cmp-button {}
-.cmp-button__text {}
-.cmp-button__icon {}
-//.cmp-button__icon--myIcon {}
+.cmp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cmp-button--primary {
+  background-color: $color-button-primary;
+      color: $color-text-header-footer;
+      border-radius: 4px;
+      padding: 16px 24px;
+      border: none;
+      height: 60px;
+      width: 190px;
+      font-size: $font-button-size;
+      transition: background 0.3s;
+      box-sizing: border-box;
+      display: inline-flex;
+      &:hover {
+        background-color: darken($color-button-primary, 10%);
+        transform: scale(1.15);
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+      }
+}
+.cmp-button--transparent{
+  background-color: transparent;
+      color: $color-text-header-footer;
+      border-radius: 4px;
+      padding: 16px 24px;
+      border: none;
+      height: 60px;
+      width: 190px;
+      font-size: $font-button-size;
+      transition: background 0.3s;
+      box-sizing: border-box;
+      display: inline-flex;
+      &:hover {
+        background-color: darken(rgba(255, 255, 255, 0.1), 10%);
+        transform: scale(1.15);
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+      }
+}
+.cmp-button--text {}
+.cmp-button--icon {}

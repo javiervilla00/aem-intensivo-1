@@ -1,10 +1,12 @@
 
 @import 'variables';
 @import 'base';
-@import '../components/header-lp';
 @import '../components/footer-lp';
 @import '../components/header-lp';
+@import '../components/hero-lp';
+@import '../components/button';
 @import '../components/brands';
 @import '../components/cardlist-lp';
+@import '../components/image-text';
 @import '../components/**/*.scss';
 @import './styles/*.scss';

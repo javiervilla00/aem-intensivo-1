@@ -5,10 +5,10 @@
   flex-wrap: wrap;
   gap: 40px;
   margin: 40px 16px 14px 16px;
-  @media (min-width: 768px) {
+  @media ($tablet) {
     margin: 45px 16px 80px 16px;
   }
-  @media (min-width: 1025px) {
+  @media ($desktop) {
     margin: 80px 160px;
     gap: 44.44px;
   }
@@ -16,7 +16,7 @@
     width: 120px;
     height: 120px;
     object-fit: contain;
-    @media (min-width: 1025px) {
+    @media ($desktop) {
       filter: grayscale(100%);
       opacity: 0.6;
       transition: all 0.3s ease;

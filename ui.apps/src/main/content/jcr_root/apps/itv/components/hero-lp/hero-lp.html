@@ -1,5 +1,5 @@
 <sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
-<section class="itv-hero-lp">
+<div class="itv-hero-lp">
   <div class="itv-hero-lp__content">
     <h1 class="itv-hero-lp__content-title" data-sly-test="${properties.title}">
       ${properties.title}
@@ -9,26 +9,30 @@
     </p>
   </div>
   <div class="itv-hero-lp__buttons">
-    <div class="itv-hero-lp__buttons-buy">
-      <sly data-sly-resource="${'buy' @ resourceType='core/wcm/components/button/v2/button'}"></sly>
-    </div>
-    <div class="itv-hero-lp__buttons-testdrive">
-      <sly
-        data-sly-resource="${'whatsapp' @ resourceType='core/wcm/components/button/v2/button'}"
-      ></sly>
-    </div>
+    <a data-sly-test="${properties.buytext}"
+      href="${properties.buylink}"
+      class="cmp-button cmp-button--primary">
+      <span class="cmp-button--text">${properties.buytext}</span>    
+    </a>
+    <a data-sly-test="${properties.testtext}"
+      href="${properties.testlink}"
+      class="cmp-button cmp-button--transparent">
+      <span class="cmp-button--text">${properties.testtext}</span>    
+    </a>
   </div>
   <div class="itv-hero-lp__images">
     <div class="itv-hero-lp__backgroundimage">
-      <sly
-        data-sly-resource="${'background' @ resourceType='core/wcm/components/image/v2/image'}"
-      ></sly>
+      <img data-sly-test="${properties.backgroundimage}"
+        src="${properties.backgroundimage}"
+        alt="Background image" />
     </div>
     <div class="itv-hero-lp__carimage">
-      <sly data-sly-resource="${'car' @ resourceType='core/wcm/components/image/v2/image'}"></sly>
+        <img data-sly-test="${properties.carimage}"
+        src="${properties.carimage}"
+        alt="Car image" />
     </div>
   </div>
-</section>
+</div>
 <sly
   data-sly-call="${templates.placeholder @ isEmpty=!properties.title, classAppend='itv-hero-lp'}"
 ></sly>
