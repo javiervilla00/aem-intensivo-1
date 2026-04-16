@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+  xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+  xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+  jcr:primaryType="nt:unstructured"
+  jcr:title="Configuración Hero de Marca"
+  sling:resourceType="cq/gui/components/authoring/dialog">
+  <content jcr:primaryType="nt:unstructured"
+    sling:resourceType="granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+      <tabs jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+        maximized="{Boolean}true">
+        <items jcr:primaryType="nt:unstructured">
+          <properties jcr:primaryType="nt:unstructured"
+            jcr:title="Propiedades"
+            sling:resourceType="granite/ui/components/coral/foundation/container"
+            margin="{Boolean}true">
+            <items jcr:primaryType="nt:unstructured">
+              <bgImage jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Imagen de fondo"
+                name="./bgImage"
+                rootPath="/content/dam/itv/brands" />
+              <bgVideoMobile jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Video de fondo (móvil)"
+                name="./bgVideoMobile"
+                rootPath="/content/dam/itv/brands" />
+              <bgVideoDesktop jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Video de fondo (escritorio)"
+                name="./bgVideoDesktop"
+                rootPath="/content/dam/itv/brands" />
+              <logo jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Logo de la marca"
+                name="./logo"
+                rootPath="/content/dam/itv/logos" />
+              <title jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Título de la marca" name="./title" />
+              <subtitle jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                fieldLabel="Subtítulo" name="./subtitle" />
+              <link jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Enlace botón modelos" name="./link"
+                rootPath="/content/itv/us/en/landing-page-test" />
+              <buttonText jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Texto botón ver modelos" name="./buttonText" />
+            </items>
+          </properties>
+        </items>
+      </tabs>
+    </items>
+  </content>
+</jcr:root>

@@ -3,36 +3,64 @@
 
 $font-family:           inter, sans-serif;
 $font-family-luxury:    "Playfair Display", serif;
-$font-size:             16px;
-$font-title-size-luxury: clamp(64px, 4vw, 140px);
+$font-size:             clamp(14px, 1.2vw, 18px);
+$font-button-size:      clamp(14px, 1.5vw, 18px);
+$font-title-size:       clamp(18px, 2.5vw, 28px);
+$font-title-size-h1:    clamp(32px, 4vw, 48px);
+$font-title-size-luxury: clamp(32px, 7vw, 140px);
 $font-title-size-luxury-mobile: clamp(32px, 8vw, 48px);
-$font-button-size:      18px;
-$font-title-size-h1-mobile:    32px;
-$font-title-size-h1-tablet-desktop:    48px;
-$font-title-size:       24px;
+$font-title-size-h1-mobile:           32px;
+$font-title-size-h1-tablet-desktop:   48px;
 $font-height:           1.5;
 
-//== Color
-
+//== Colors
 // Normal mode
 $color-foreground:      #202020;
 $color-background:      #ffffff;
 $color-link:            #2020E0;
 $color-background-header-footer: #1a1a1a;
-$color-text-header-footer: #ffffff;
-$color-text-title-header-footer: #666666;
-$color-divider-footer: #333333;
 $color-background-whatsapp: #128c7e;
+$color-text-title-header-footer: #666666;
+$color-text-header-footer: #ffffff;
+$color-divider-footer: #333333;
+$color-divider: #c6c6c6;
 $color-button-primary: #0072ED;
+$color-alert-error: #D93025;
 $title-shadow-hero-1: 0 0 2px #000000;
 $title-shadow-hero-2: 2px 2px 10px #000000;
 $title-shadow-hero-3: 0 0 20px #000000b3;
-$color-divider: #c6c6c6;
 // Dark mode
 $color-foreground-dark: invert($color-foreground);
 $color-background-dark: invert($color-background);
 $color-link-dark:       invert($color-link);
 
-//Media size
+//== Media size
 $tablet: "min-width: 768px";
 $desktop: "min-width: 1025px";
+
+//== Theme Brands
+:root {
+  --theme-primary: #333333;
+  --theme-secondary: #666666;
+  --theme-text-overlay: #ffffff;
+}
+// Mercedes Benz
+.theme-mercedes {
+  --theme-primary: #000000;
+  --theme-secondary: #EBEBEB;
+}
+// BMW
+.theme-bmw {
+  --theme-primary: #0066B1;
+  --theme-secondary: #E6E6E6;
+}
+// Audi
+.theme-audi {
+  --theme-primary: #BB0A30;
+  --theme-secondary: #000000;
+}
+// lexus
+.theme-lexus {
+  --theme-primary: #2C2C2B;
+  --theme-secondary: #B69A77;
+}

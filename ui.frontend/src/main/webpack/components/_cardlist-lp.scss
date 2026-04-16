@@ -53,11 +53,7 @@
   .cardlist-lp__buttons {
     display: flex;
     gap: 24px;
-    padding: 22px 24.5px;
     margin-top: auto;
-    @media ($tablet) {
-      padding: 22px 32.5px;
-    }
     .cardlist-lp__buy-button {
       background-color: #0072ed;
       color: #F6F6F6;

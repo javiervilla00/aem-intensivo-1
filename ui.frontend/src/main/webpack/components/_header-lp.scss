@@ -77,8 +77,20 @@
       text-decoration: none;
       font-size: $font-size;
       font-family: $font-family;
-      &:hover {
-        border-bottom: 2px solid $color-text-header-footer;
+      position: relative;
+      padding: 8px 16px;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: $color-text-header-footer;
+        transition: width 0.4s ease-in-out;
+      }
+      &:hover::after {
+        width: 100%;
       }
     }
   }

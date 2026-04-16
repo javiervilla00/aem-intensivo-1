@@ -1,0 +1,18 @@
+<section class="impact-numbers">
+        <div class="impact-numbers__item">
+          <h2 class="impact-numbers__value" data-target="${properties.value1}">0</h2>
+          <p class="impact-numbers__description">${properties.description1}</p>
+        </div>
+        <div class="impact-numbers__item">
+          <h2 class="impact-numbers__value" data-target="${properties.value2}">0</h2>
+          <p class="impact-numbers__description">${properties.description2}</p>
+        </div>
+        <div class="impact-numbers__item">
+          <h2 class="impact-numbers__value" data-target="${properties.value3}">0</h2>
+          <p class="impact-numbers__description">${properties.description3}</p>
+        </div>
+</section>
+<div data-sly-test="${wcmmode.edit && !properties.value1 || !properties.value2 || !properties.value3}" 
+     class="cq-placeholder"
+     data-emptytext="Números de Impacto">
+</div>
