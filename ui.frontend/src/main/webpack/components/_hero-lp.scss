@@ -29,7 +29,7 @@
   }
   &__content {
     &-title {
-      font-size: $font-title-size-h1-mobile;
+      font-size: $font-title-size;
       font-family: $font-family;
       color: $color-text-header-footer;
       margin-bottom: 24px;
@@ -38,7 +38,7 @@
       }
     }
     &-description {
-      font-size: $font-title-size;
+      font-size: $font-title-size-h1-mobile;
       font-family: $font-family;
       color: $color-text-header-footer;
       margin-bottom: 24px;
@@ -135,13 +135,15 @@
       justify-content: center;
       text-align: center;
       height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2;
       box-sizing: border-box;
       padding: 0 16px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 1440px;
+      z-index: 2;
       @media ($tablet) {
         align-items: flex-start;
         text-align: left;
