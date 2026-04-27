@@ -4,7 +4,9 @@
 <sly data-sly-call="${clientlib.all @ categories='itv.components.brands'}"/>
 <div class="brands__container" data-sly-test="${model.brands}">
   <sly data-sly-list.brand="${model.brands}">
+  <a class="brands__link" href="${brand.brandLink @ context='uri'}" target="_blank" data-sly-unwrap="${!brand.brandLink}">
     <img class="brands__image" src="${brand.image}" alt="${brand.name}" />
-  </sly>
+ </a>
+    </sly>
 </div>
 <sly data-sly-call="${templates.placeholder @ isEmpty=!model.brands, classAppend='brands__container'}"></sly>

@@ -26,4 +26,14 @@
       }
     }
   }
+  .brands__link {
+    display: block;
+    text-decoration: none;
+  }
+  .cmp-link__screen-reader-only {
+    display: none;
+  }
+  .cq-LinkChecker {
+    display: none;
+  }
 }
