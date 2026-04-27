@@ -1,22 +1,40 @@
 <div
-  data-sly-test="${wcmmode.edit && !properties.bgVideoMobile && !properties.bgVideoDesktop}"
+  data-sly-test="${wcmmode.edit && !properties.bgVideoMobile && !properties.bgVideoDesktop && !properties.bgImage}"
   class="cq-placeholder"
-  data-emptytext="Hero de marca"></div>
-<div class="brand-hero" data-sly-test="${properties.bgVideoMobile || properties.bgVideoDesktop}">
-  <div
-    class="brand-hero__overlay">
-    <img
-      src="${properties.bgImage @ context='uri'}"
-      alt="Fondo Hero"
-      class="brand-hero__bg-image"
-      data-sly-test="${properties.bgImage && !properties.bgVideoMobile && !properties.bgVideoDesktop}" />
-    <video playsinline loop autoplay muted class="brand-hero__video--mobile" data-sly-test="${properties.bgVideoMobile}">
-      <source src="${properties.bgVideoMobile @ context='uri'}" type="video/mp4">
-    </video>
-    <video playsinline loop autoplay muted class="brand-hero__video--desktop" data-sly-test="${properties.bgVideoDesktop}">
-      <source src="${properties.bgVideoDesktop @ context='uri'}" type="video/mp4">
-    </video>
-  </div>
+  data-emptytext="Hero de marca"
+></div>
+<div
+  class="brand-hero ${properties.textRight ? 'brand-hero--content--right' : ''}"
+  data-sly-test="${properties.bgVideoMobile || properties.bgVideoDesktop || properties.bgImage}"
+>
+  <div class="brand-hero__overlay"></div>
+  <img
+    src="${properties.bgImage @ context='uri'}"
+    alt="Fondo Hero"
+    class="brand-hero__bg-image ${properties.invertImage == 'true' ? 'brand-hero__bg-image--invert' : ''}"
+    style="object-position: ${properties.bgPosition || 'center' @ context='styleString'};"
+    data-sly-test="${properties.bgImage && !properties.bgVideoMobile && !properties.bgVideoDesktop}"
+  />
+  <video
+    playsinline
+    loop
+    autoplay
+    muted
+    class="brand-hero__video--mobile"
+    data-sly-test="${properties.bgVideoMobile}"
+  >
+    <source src="${properties.bgVideoMobile @ context='uri'}" type="video/mp4" />
+  </video>
+  <video
+    playsinline
+    loop
+    autoplay
+    muted
+    class="brand-hero__video--desktop"
+    data-sly-test="${properties.bgVideoDesktop}"
+  >
+    <source src="${properties.bgVideoDesktop @ context='uri'}" type="video/mp4" />
+  </video>
   <div class="brand-hero__content">
     <img
       src="${properties.logo}"

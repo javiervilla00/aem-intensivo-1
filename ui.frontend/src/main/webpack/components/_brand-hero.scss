@@ -12,23 +12,23 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 50%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 500%);
     z-index: 2;
     @media ($tablet) {
-      background: linear-gradient(to left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 50%);
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 500%);
     }
   }
   &__bg-image,
   &__video--mobile,
   &__video--desktop {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     object-fit: cover;
+    &--invert {
+      transform: scaleX(-1);
+    }
   }
   &__video--mobile {
     @media ($tablet) {
@@ -64,7 +64,6 @@
     height: auto;
     max-width: 120px;
     margin-bottom: 24px;
-    filter: brightness(0) invert(1);
   }
   &__title {
     font-family: $font-family-luxury;
@@ -72,6 +71,9 @@
     margin-bottom: 16px;
     text-shadow: $title-shadow-hero-2;
     @media ($tablet) {
+      font-size: 80px;
+    }
+    @media ($desktop) {
       font-size: $font-title-size-luxury;
     }
   }
@@ -100,8 +102,24 @@
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
     }
   }
+  &--content--right {
+    .brand-hero__overlay {
+      @media ($tablet) {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 500%);
+      }
+    }
+    .brand-hero__content {
+      @media ($desktop) {
+        padding-left: 50%;
+        padding-right: 0;
+      }
+    }
+  }
 }
 .cq-Editable-dom .brand-hero {
+
   height: auto !important;
-  min-height: 0 !important;
+
+  min-height: 650px !important;
+
 }
