@@ -1,0 +1,19 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html"/>
+<section class="editorial-block ${properties.imageRight == 'true' ? 'editorial-block--reverse' : ''}" data-sly-test="${properties.title}">
+    <div class="editorial-block__container">
+      <figure class="editorial-block__media">
+        <img class="editorial-block__image" src="${properties.imagePath}" alt="${properties.imageAlt}" />
+      </figure>
+      <div class="editorial-block__content">
+        <span class="editorial-block__pretitle">${properties.pretitle}</span>
+        <h2 class="editorial-block__title">${properties.title}</h2>
+        <div class="editorial-block__description">${properties.description @ context='html'}</div>
+        <sly data-sly-test="${properties.linkTo}">
+          <a href="${properties.linkTo @ context='uri'}.html" class="btn btn--outline editorial-block__action">
+            Leer más
+          </a>
+        </sly>
+      </div>
+    </div>
+</section>
+<sly data-sly-call="${templates.placeholder @ isEmpty=!properties.title, classAppend='editorial-block'}"></sly>
