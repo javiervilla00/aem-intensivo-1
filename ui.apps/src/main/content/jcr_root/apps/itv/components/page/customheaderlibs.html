@@ -19,6 +19,22 @@
 
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
 
+<script>
+(function() {
+  var path = window.location.pathname.toLowerCase();
+  var htmlTag = document.documentElement;
+  if (path.indexOf('/mercedes') !== -1) {
+    htmlTag.classList.add('theme-mercedes');
+  } else if (path.indexOf('/audi') !== -1) {
+    htmlTag.classList.add('theme-audi');
+  } else if (path.indexOf('/bmw') !== -1) {
+    htmlTag.classList.add('theme-bmw');
+  } else if (path.indexOf('/lexus') !== -1) {
+    htmlTag.classList.add('theme-lexus');
+  }
+})();
+</script>
+
 <script src="
 https://cdn.jsdelivr.net/npm/tarteaucitronjs@1.32.0/tarteaucitron.min.js
 "></script>
