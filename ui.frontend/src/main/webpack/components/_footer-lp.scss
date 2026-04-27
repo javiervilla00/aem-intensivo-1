@@ -113,7 +113,7 @@
           width: 0;
           height: 2px;
           background-color: $color-text-header-footer;
-          transition: width 0.4s ease-in-out;
+          transition: width 0.3s ease-in-out;
         }
         &:hover::after {
           width: 100%;
