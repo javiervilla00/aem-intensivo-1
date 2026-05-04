@@ -1,0 +1,31 @@
+<sly
+  data-sly-use.model="com.itv.core.models.CardsModelLp"
+  data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<div class="cardlist-lp__main-container" data-sly-test="${model.cards}">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <sly data-sly-list.card="${model.cards}">
+        <div class="swiper-slide">
+          <div class="cardlist-lp__card">
+            <img class="cardlist-lp__image" src="${card.image}" alt="${card.title}" />
+            <div class="cardlist-lp__content">
+              <h2 class="cardlist-lp__title">${card.title}</h2>
+              <p class="cardlist-lp__description">${card.description}</p>
+            </div>
+            <div class="cardlist-lp__buttons">
+              <a href="#" class="cardlist-lp__buy-button">Comprar</a>
+              <a href="#" class="cardlist-lp__test-button">Prueba</a>
+            </div>
+          </div>
+        </div>
+      </sly>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+<sly
+  data-sly-call="${templates.placeholder @ isEmpty=!model.cards, classAppend='cardlist-lp__main-container'}"
+></sly>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

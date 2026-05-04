@@ -1,0 +1,34 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<section class="itv-hero-lp">
+  <div class="itv-hero-lp__content">
+    <h1 class="itv-hero-lp__content-title" data-sly-test="${properties.title}">
+      ${properties.title}
+    </h1>
+    <p class="itv-hero-lp__content-description" data-sly-test="${properties.description}">
+      ${properties.description}
+    </p>
+  </div>
+  <div class="itv-hero-lp__buttons">
+    <div class="itv-hero-lp__buttons-buy">
+      <sly data-sly-resource="${'buy' @ resourceType='core/wcm/components/button/v2/button'}"></sly>
+    </div>
+    <div class="itv-hero-lp__buttons-testdrive">
+      <sly
+        data-sly-resource="${'whatsapp' @ resourceType='core/wcm/components/button/v2/button'}"
+      ></sly>
+    </div>
+  </div>
+  <div class="itv-hero-lp__images">
+    <div class="itv-hero-lp__backgroundimage">
+      <sly
+        data-sly-resource="${'background' @ resourceType='core/wcm/components/image/v2/image'}"
+      ></sly>
+    </div>
+    <div class="itv-hero-lp__carimage">
+      <sly data-sly-resource="${'car' @ resourceType='core/wcm/components/image/v2/image'}"></sly>
+    </div>
+  </div>
+</section>
+<sly
+  data-sly-call="${templates.placeholder @ isEmpty=!properties.title, classAppend='itv-hero-lp'}"
+></sly>

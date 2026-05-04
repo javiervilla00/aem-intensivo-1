@@ -1,0 +1,50 @@
+<footer class="itv-footer-lp">
+  <div class="itv-footer-lp__top">
+    <div class="itv-footer-lp__info">
+      <div class="itv-footer-lp__logo">
+        <sly
+          data-sly-resource="${'logo' @ resourceType='core/wcm/components/image/v3/image'}"
+        ></sly>
+      </div>
+      <p class="itv-footer-lp__description">${properties.description || 'Descripción de BuyCar'}</p>
+      <div class="itv-footer-lp__contact">
+        <p class="itv-footer-lp__address">${properties.address || 'Direccion'}</p>
+        <p class="itv-footer-lp__email">${properties.email || 'cs@buycar.co.id'}</p>
+      </div>
+      </div>
+      <div class="itv-footer-lp__links">
+        <p class="itv-footer-lp__links-title">Links</p>
+        <sly
+          data-sly-resource="${'nav-footer' @ resourceType='core/wcm/components/navigation/v2/navigation'}"
+        ></sly>
+      </div>
+  </div>
+  <hr class="itv-footer-lp__divider" />
+  <div class="itv-footer-lp__bottom">
+    <div class="itv-footer-lp__bottom-container">
+      <p class="itv-footer-lp__copyright">
+        ${properties.copyright || '© 2023 PT Beli Mobil Duit Sendiri'}
+      </p>
+      <div class="itv-footer-lp__social">
+        <sly data-sly-list.child="${resource.listChildren}">
+          <sly data-sly-test="${child.name == 'socialLinks'}">
+            <div class="itv-footer-lp__social" data-sly-list.item="${child.listChildren}">
+              <a href="${item.valueMap.linkURL}" target="_blank">
+                <img
+                  src="${item.valueMap.iconPath}"
+                  alt="${item.valueMap.socialName}"
+                  class="itv-footer-lp__social-icon"
+                />
+              </a>
+            </div>
+          </sly>
+        </sly>
+        <sly data-sly-test="${wcmmode.edit && !resource.hasChildren}">
+          <p style="color: gray; font-size: 12px; border: 1px dashed gray; padding: 5px">
+            Configura las redes sociales en el diálogo.
+          </p>
+        </sly>
+      </div>
+    </div>
+  </div>
+</footer>

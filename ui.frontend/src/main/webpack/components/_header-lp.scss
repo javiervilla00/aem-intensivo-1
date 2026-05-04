@@ -1,0 +1,120 @@
+.itv-header-lp {
+  background-color: $color-background-header-footer;
+  color: $color-text-header-footer;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 16px;
+    height: 88px;
+    @media (min-width: 768px) {
+      padding: 24px 16px;
+    }
+    @media (min-width: 1025px) {
+      padding: 24px 160px;
+    }
+  }
+
+  &__logo {
+    .cmp-image__image {
+      max-height: 40px;
+      object-fit: contain;
+    }
+  }
+
+  &__nav {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
+      flex-grow: 1;
+      padding-left: 40px;
+      .cmp-navigation__group {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 16px 8px;
+      }
+    }
+    .cmp-navigation__item-link {
+      color: $color-text-header-footer;
+      text-decoration: none;
+      font-size: $font-size;
+      font-family: $font-family;
+      &:hover {
+        border-bottom: 2px solid $color-text-header-footer;
+      }
+    }
+  }
+
+  &__whatsapp {
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+      .cmp-button {
+        background-color: $color-background-whatsapp;
+        color: $color-text-header-footer;
+        border-radius: 25px;
+        border: none;
+        padding: 8px 12px 8px 8px;
+        font-size: $font-size;
+        font-family: $font-family;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 24px;       /* El tamaño total de la caja de diseño */
+          height: 24px;
+          margin-right: 8px; /* Separación con los números del teléfono */
+          background-color: #ffffff;
+          border-radius: 50%;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          left: 13px; 
+          top: 50%;
+          transform: translateY(-50%);
+          width: 14px;
+          height: 14px;
+          background-color: $color-background-whatsapp;
+          -webkit-mask-image: url('../resources/images/whatsapp-logo.svg');
+          mask-image: url('../resources/images/whatsapp-logo.svg');
+          -webkit-mask-size: contain;
+          mask-size: contain;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-position: center;
+          mask-position: center;
+        }
+        &:hover {
+          background-color: darken($color-background-whatsapp, 10%);
+        }
+      }
+    }
+  }
+  &__burger {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+    @media (min-width: 768px) {
+      display: none;
+    }
+    span {
+      display: block;
+      width: 48px;
+      height: 6px;
+      background-color: $color-text-header-footer;
+      border-radius: 2px;
+    }
+  }
+}

@@ -1,0 +1,173 @@
+.itv-hero-lp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 686px !important;
+  padding: 0 14.5px;
+  background-color: $color-background-header-footer;
+  overflow: hidden;
+  @media (min-width: 768px) {
+    height: 557px !important;
+    padding: 0 109.17px;
+  }
+  @media (min-width: 1025px) {
+    height: 768px !important;
+    padding: 0 204.17px;
+    display: flex;
+    justify-content: center;
+  }
+  :global(.cq-wcm-edit) & {
+    &__backgroundimage, &__carimage {
+      pointer-events: auto !important;
+      z-index: 5 !important;
+      border: 1px dashed rgba(255,255,255,0.5);
+    }
+  }
+  &__content,
+  &__buttons {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 519px;
+    }
+  }
+  &__content {
+    &-title {
+      font-size: $font-title-size-h1-mobile;
+      font-family: $font-family;
+      color: $color-text-header-footer;
+      margin-bottom: 24px;
+      @media (min-width: 768px) {
+        font-size: $font-title-size-h1-tablet-desktop;
+      }
+    }
+    &-description {
+      font-size: $font-title-size;
+      font-family: $font-family;
+      color: $color-text-header-footer;
+      margin-bottom: 24px;
+      max-width: 332px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 152.41px;
+    &-buy .cmp-button {
+      background-color: $color-button-primary;
+      color: $color-text-header-footer;
+      border-radius: 4px;
+      padding: 16px 24px;
+      border: none;
+      height: 60px;
+      width: 118px;
+      font-size: $font-button-size;
+      transition: background 0.3s;
+      &:hover {
+        background-color: darken($color-button-primary, 10%);
+        transform: scale(1.15);
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+    &-testdrive .cmp-button {
+      background-color: transparent;
+      color: $color-text-header-footer;
+      border-radius: 4px;
+      padding: 16px 24px;
+      border: none;
+      height: 60px;
+      width: 190px;
+      font-size: $font-button-size;
+      transition: background 0.3s;
+      &:hover {
+        background-color: darken(rgba(255, 255, 255, 0.1), 10%);
+        transform: scale(1.15);
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  &__images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.2) 60%,
+        transparent 100%
+      );
+      pointer-events: none;
+    }
+  }
+  &__backgroundimage {
+    position: absolute;
+    top: -89px;
+    left: -479px;
+    width: 1405px;
+    height: 1101px;
+    transform: scaleX(-1);
+    z-index: 1;
+    overflow-x: hidden;
+    @media (min-width: 768px) {
+      top: -203px;
+      width: 1920px;
+      height: 1267px;
+      left: 0;
+    }
+    .cmp-image,
+    .cmp-image__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__carimage {
+    position: relative;
+    z-index: 3;
+    pointer-events: none;
+    top: 291px;
+    left: -62px;
+    max-width: none !important;
+    @media (min-width: 768px) {
+      top: -50px;
+      left: 382px;
+      height: auto;
+    }
+    @media (min-width: 1025px) {
+      position: absolute;
+      top: 0px;
+      left: 590px;
+      height: auto;
+    }
+    .cmp-image,
+    .cmp-image__image {
+      width: 728px;
+      max-width: none !important;
+      height: auto !important;
+      display: block !important;
+      object-fit: contain !important;
+      object-position: left bottom !important;
+      @media (min-width: 768px) {
+        width: 1175px;
+      }
+      @media (min-width: 1025px) {
+        width: 1400px;
+      }
+    }
+  }
+}

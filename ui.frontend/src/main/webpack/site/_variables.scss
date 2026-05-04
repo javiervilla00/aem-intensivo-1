@@ -1,8 +1,12 @@
 
 //== Font
 
-$font-family:           "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family:           inter, sans-serif;
 $font-size:             16px;
+$font-button-size:      18px;
+$font-title-size-h1-mobile:    32px;
+$font-title-size-h1-tablet-desktop:    48px;
+$font-title-size:       24px;
 $font-height:           1.5;
 
 //== Color
@@ -11,6 +15,12 @@ $font-height:           1.5;
 $color-foreground:      #202020;
 $color-background:      #ECECEC;
 $color-link:            #2020E0;
+$color-background-header-footer: #1a1a1a;
+$color-text-header-footer: #ffffff;
+$color-text-title-header-footer: #666666;
+$color-divider-footer: #333333;
+$color-background-whatsapp: #128c7e;
+$color-button-primary: #0072ED;
 
 // Dark mode
 $color-foreground-dark: invert($color-foreground);
