@@ -42,7 +42,7 @@
                       sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
                       fieldLabel="Icono (SVG/PNG)"
                       name="./iconPath"
-                      rootPath="/content/dam" />
+                      rootPath="/content/dam/itv/social-media-icons" />
                     <link jcr:primaryType="nt:unstructured"
                       sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
                       fieldLabel="Enlace Red Social"

@@ -1,0 +1,32 @@
+<sly data-sly-use.templates="core/wcm/components/commons/v1/templates.html" />
+<section class="cta-block" data-sly-test="${properties.title}">
+  <div class="cta-block__bg-container">
+    <img class="cta-block__bg-image" src="${properties.imagePath}" alt="" role="presentation" />
+    <div class="cta-block__overlay"></div>
+  </div>
+  <div class="cta-block__glass-card">
+    <h2 class="cta-block__title">${properties.title}</h2>
+    <p class="cta-block__subtitle" data-sly-test="${properties.subtitle}">${properties.subtitle}</p>
+    <div class="cta-block__actions">
+      <sly data-sly-test="${properties.primaryBtnText}">
+        <a
+          href="${properties.primaryBtnLink @ context='uri'}.html"
+          class="cmp-button cmp-button--primary"
+        >
+          ${properties.primaryBtnText}
+        </a>
+      </sly>
+      <sly data-sly-test="${properties.secondaryBtnText}">
+        <a
+          href="${properties.secondaryBtnLink @ context='uri'}.html"
+          class="cmp-button cmp-button--secondary"
+        >
+          ${properties.secondaryBtnText}
+        </a>
+      </sly>
+    </div>
+  </div>
+</section>
+<sly
+  data-sly-call="${templates.placeholder @ isEmpty=!properties.title, classAppend='cta-block', emptyText='Call To Action'}"
+></sly>

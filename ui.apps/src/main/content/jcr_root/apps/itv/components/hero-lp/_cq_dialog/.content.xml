@@ -13,6 +13,26 @@
       <description jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
         fieldLabel="Descripción" name="./description" />
+      <buyText jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+        fieldLabel="Texto botón comprar" name="./buytext" />
+      <buyLink jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+        fieldLabel="Enlace botón comprar" name="./buylink" />
+      <testText jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+        fieldLabel="Texto botón probar" name="./testtext" />
+      <testLink jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+        fieldLabel="Enlace botón probar" name="./testlink" />
+      <backgroundImage jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+        fieldLabel="Imagen fondo"
+        name="./backgroundimage"/>
+      <image jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+        fieldLabel="Coche"
+        name="./carimage" />
     </items>
   </content>
 </jcr:root>

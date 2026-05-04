@@ -1,0 +1,19 @@
+<sly data-sly-use.model="com.itv.core.models.Accordion3DModel" />
+<section data-sly-test="${model.hasEmployees}" 
+         class="cmp-accordion3d style-empleados-3d ${wcmmode.edit ? 'wcm-edit-mode' : ''}">
+    <div class="cmp-accordion3d__items">
+        <sly data-sly-list.empleado="${model.getEmployees}">
+            <div class="cmp-accordion3d__item" tabindex="0">
+                <img src="${empleado.image}" alt="${empleado.name}" class="cmp-accordion3d__image">
+                <div class="cmp-accordion3d__content">
+                    <h3 class="cmp-accordion3d__title">${empleado.name}</h3>
+                    <p class="cmp-accordion3d__role">${empleado.role}</p>
+                </div>
+            </div>
+        </sly>
+    </div>
+</section>
+<div data-sly-test="${wcmmode.edit && !model.hasEmployees}" 
+     class="cq-placeholder"
+     data-emptytext="Galería 3D Accordion">
+</div>

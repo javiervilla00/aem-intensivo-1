@@ -11,10 +11,11 @@
     justify-content: space-between;
     padding: 24px 16px;
     height: 88px;
-    @media (min-width: 768px) {
+    position: relative;
+    @media ($tablet) {
       padding: 24px 16px;
     }
-    @media (min-width: 1025px) {
+    @media ($desktop) {
       padding: 24px 160px;
     }
   }
@@ -28,17 +29,47 @@
 
   &__nav {
     display: none;
-    @media (min-width: 768px) {
+    .itv-header-lp.is-open & {
+      display: block;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: auto;
+      min-width: 250px;
+      background-color: $color-background-header-footer;
+      padding: 32px 16px;
+      border-top: 1px solid $color-text-header-footer;
+      .cmp-navigation__group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 24px;
+      }
+    }
+    @media ($tablet) {
       display: block;
       flex-grow: 1;
       padding-left: 40px;
+      .itv-header-lp.is-open & {
+        position: static;
+        top: auto;
+        right: auto;
+        width: auto;
+        min-width: 0;
+        border: none;
+        padding: 0 0 0 40px;
+      }
       .cmp-navigation__group {
         display: flex;
+        flex-direction: row;
         align-items: center;
         list-style: none;
         margin: 0;
         padding: 0;
-        gap: 16px 8px;
+        gap: 8px 16px;
       }
     }
     .cmp-navigation__item-link {
@@ -46,15 +77,27 @@
       text-decoration: none;
       font-size: $font-size;
       font-family: $font-family;
-      &:hover {
-        border-bottom: 2px solid $color-text-header-footer;
+      position: relative;
+      padding: 8px 16px;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background-color: $color-text-header-footer;
+        transition: width 0.3s ease-in-out;
+      }
+      &:hover::after {
+        width: 100%;
       }
     }
   }
 
   &__whatsapp {
     display: none;
-    @media (min-width: 768px) {
+    @media ($tablet) {
       display: flex;
       .cmp-button {
         background-color: $color-background-whatsapp;
@@ -106,7 +149,8 @@
     flex-direction: column;
     gap: 8px;
     cursor: pointer;
-    @media (min-width: 768px) {
+    z-index: 1001;
+    @media ($tablet) {
       display: none;
     }
     span {
@@ -115,6 +159,18 @@
       height: 6px;
       background-color: $color-text-header-footer;
       border-radius: 2px;
+      transition: all 0.3s ease-in-out;
+    }
+    .itv-header-lp.is-open & {
+      span:nth-child(1) {
+        transform: translateY(14px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-14px) rotate(-45deg);
+      }
     }
   }
 }

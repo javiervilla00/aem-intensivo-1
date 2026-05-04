@@ -22,11 +22,15 @@
                   sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                   fieldLabel="Logo de la marca"
                   name="./image"
-                  rootPath="/content/dam" />
+                  rootPath="/content/dam/itv/logos" />
                 <name jcr:primaryType="nt:unstructured"
                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                   fieldLabel="Nombre de la marca"
                   name="./name" />
+                <brandLink jcr:primaryType="nt:unstructured"
+                  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                  fieldLabel="Enlace de la marca (con http:// o https://)"
+                  name="./brandLink" />
               </items>
             </field>
           </brands>

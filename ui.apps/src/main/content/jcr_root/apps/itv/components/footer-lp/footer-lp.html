@@ -15,7 +15,7 @@
       <div class="itv-footer-lp__links">
         <p class="itv-footer-lp__links-title">Links</p>
         <sly
-          data-sly-resource="${'nav-footer' @ resourceType='core/wcm/components/navigation/v2/navigation'}"
+          data-sly-resource="${'footer-links' @ resourceType='core/wcm/components/list/v4/list'}"
         ></sly>
       </div>
   </div>
@@ -23,7 +23,7 @@
   <div class="itv-footer-lp__bottom">
     <div class="itv-footer-lp__bottom-container">
       <p class="itv-footer-lp__copyright">
-        ${properties.copyright || '© 2023 PT Beli Mobil Duit Sendiri'}
+        © ${properties.copyright || '2023 PT Beli Mobil Duit Sendiri'}
       </p>
       <div class="itv-footer-lp__social">
         <sly data-sly-list.child="${resource.listChildren}">

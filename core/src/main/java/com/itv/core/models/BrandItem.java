@@ -4,6 +4,7 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class BrandItem {
@@ -14,6 +15,9 @@ public class BrandItem {
   @ValueMapValue
   private String name;
 
+  @ValueMapValue(injectionStrategy = InjectionStrategy.OPTIONAL)
+  private String brandLink;
+
   public String getImage() {
     return image;
   }
@@ -21,4 +25,9 @@ public class BrandItem {
   public String getName() {
     return name;
   }
+
+  public String getBrandLink() {
+    return brandLink;
+  }
+
 }
